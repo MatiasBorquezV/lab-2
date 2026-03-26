@@ -110,3 +110,115 @@ list.c:35:12: error: ‘list’ defined but not used [-Werror=unused-function]
       |            ^~~~
 cc1: all warnings being treated as errors
 adbda3e
+Thu Mar 26 07:17:59 PM UTC 2026: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘list’:
+list.c:35:24: error: expected declaration specifiers before ‘malloc’
+   35 |     List * list(List *)malloc(sizeof(List));
+      |                        ^~~~~~
+list.c:36:5: error: expected declaration specifiers before ‘if’
+   36 |     if (list != NULL){
+      |     ^~
+list.c:40:6: error: expected declaration specifiers before ‘return’
+   40 |      return list;
+      |      ^~~~~~
+list.c:41:1: error: expected declaration specifiers before ‘}’ token
+   41 | }
+      | ^
+list.c:47:31: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   47 | void * firstList(List * list) {
+      |                               ^
+list.c:51:30: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   51 | void * nextList(List * list) {
+      |                              ^
+list.c:59:30: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   59 | void * lastList(List * list) {
+      |                              ^
+list.c:63:30: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   63 | void * prevList(List * list) {
+      |                              ^
+list.c:70:42: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   70 | void pushFront(List * list, void * data) {
+      |                                          ^
+list.c:73:41: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   73 | void pushBack(List * list, void * data) {
+      |                                         ^
+list.c:80:44: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   80 | void pushCurrent(List * list, void * data) {
+      |                                            ^
+list.c:83:30: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   83 | void * popFront(List * list) {
+      |                              ^
+list.c:88:29: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   88 | void * popBack(List * list) {
+      |                             ^
+list.c:96:32: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   96 | void * popCurrent(List * list) {
+      |                                ^
+list.c:100:29: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  100 | void cleanList(List * list) {
+      |                             ^
+test.c:9:1: error: parameter ‘test_id’ is initialized
+    9 | int test_id = -1;
+      | ^~~
+test.c:12:14: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   12 | int success(){
+      |              ^
+test.c:17:24: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   17 | void err_msg(char* msg){
+      |                        ^
+test.c:24:23: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   24 | void ok_msg(char* msg){
+      |                       ^
+test.c:30:25: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   30 | void info_msg(char* msg){
+      |                         ^
+test.c:35:75: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   35 | int test_suite(int(*test)(), char* msg, int max_score, int id, int req_id){
+      |                                                                           ^
+test.c:51:26: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   51 | List* initialize_exList(){
+      |                          ^
+test.c:73:29: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   73 | List* initialize_emptyList(){
+      |                             ^
+test.c:83:18: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   83 | int test_create(){
+      |                  ^
+test.c:98:22: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   98 | int test_first_next(){
+      |                      ^
+test.c:171:21: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  171 | int test_last_prev(){
+      |                     ^
+test.c:233:21: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  233 | int test_pushfront(){
+      |                     ^
+test.c:298:23: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  298 | int test_pushcurrent(){
+      |                       ^
+test.c:357:22: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  357 | int test_popcurrent(){
+      |                      ^
+test.c:448:36: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  448 | int main( int argc, char *argv[] ) {
+      |                                    ^
+list.c:35:12: error: old-style parameter declarations in prototyped function definition
+   35 |     List * list(List *)malloc(sizeof(List));
+      |            ^~~~
+test.c:469: error: expected ‘{’ at end of input
+test.c:468:1: error: no return statement in function returning non-void [-Werror=return-type]
+  468 | }
+      | ^
+test.c: In function ‘createList’:
+test.c:468:1: error: expected declaration or statement at end of input
+test.c:469: error: control reaches end of non-void function [-Werror=return-type]
+list.c: At top level:
+list.c:35:12: error: ‘list’ defined but not used [-Werror=unused-function]
+   35 |     List * list(List *)malloc(sizeof(List));
+      |            ^~~~
+cc1: all warnings being treated as errors
+b238bf4
