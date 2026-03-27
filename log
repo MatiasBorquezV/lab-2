@@ -435,3 +435,9 @@ list.c:99:20: error: assignment to ‘Node *’ from incompatible pointer type �
    99 |         list->head = newNode;
       |                    ^
 790fc32
+Fri Mar 27 08:52:18 PM UTC 2026: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  10|2
+total_score: 40/60
+546cfd9
