@@ -406,3 +406,32 @@ list.c:110:6: note: declared here
   110 | void pushCurrent(List * list, void * data) {
       |      ^~~~~~~~~~~
 6bfc8a1
+Fri Mar 27 08:51:51 PM UTC 2026: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:90:5: error: unknown type name ‘NOde’; did you mean ‘Node’?
+   90 |     NOde * newNode = createNode(data);
+      |     ^~~~
+      |     Node
+list.c:90:22: error: initialization of ‘int *’ from incompatible pointer type ‘Node *’ [-Wincompatible-pointer-types]
+   90 |     NOde * newNode = createNode(data);
+      |                      ^~~~~~~~~~
+list.c:93:20: error: assignment to ‘Node *’ from incompatible pointer type ‘int *’ [-Wincompatible-pointer-types]
+   93 |         list->head = newNode;
+      |                    ^
+list.c:94:20: error: assignment to ‘Node *’ from incompatible pointer type ‘int *’ [-Wincompatible-pointer-types]
+   94 |         list->tail = newNode;
+      |                    ^
+list.c:97:16: error: request for member ‘next’ in something not a structure or union
+   97 |         newNode->next = list->head;
+      |                ^~
+list.c:98:26: error: assignment to ‘Node *’ from incompatible pointer type ‘int *’ [-Wincompatible-pointer-types]
+   98 |         list->head->prev = newNode;
+      |                          ^
+list.c:99:20: error: assignment to ‘Node *’ from incompatible pointer type ‘int *’ [-Wincompatible-pointer-types]
+   99 |         list->head = newNode;
+      |                    ^
+790fc32
