@@ -370,3 +370,39 @@ Thu Mar 26 07:51:49 PM UTC 2026:
  tests:  9|3
 total_score: 30/60
 9cec469
+Fri Mar 27 08:51:32 PM UTC 2026: 
+ list.c | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:90:5: error: unknown type name ‘NOde’; did you mean ‘Node’?
+   90 |     NOde * newNode = createNode(data);
+      |     ^~~~
+      |     Node
+list.c:90:22: error: initialization of ‘int *’ from incompatible pointer type ‘Node *’ [-Wincompatible-pointer-types]
+   90 |     NOde * newNode = createNode(data);
+      |                      ^~~~~~~~~~
+list.c:93:20: error: assignment to ‘Node *’ from incompatible pointer type ‘int *’ [-Wincompatible-pointer-types]
+   93 |         list->head = newNode;
+      |                    ^
+list.c:94:20: error: assignment to ‘Node *’ from incompatible pointer type ‘int *’ [-Wincompatible-pointer-types]
+   94 |         list->tail = newNode;
+      |                    ^
+list.c:97:16: error: request for member ‘next’ in something not a structure or union
+   97 |         newNode->next = list->head;
+      |                ^~
+list.c:98:26: error: assignment to ‘Node *’ from incompatible pointer type ‘int *’ [-Wincompatible-pointer-types]
+   98 |         list->head->prev = newNode;
+      |                          ^
+list.c:99:20: error: assignment to ‘Node *’ from incompatible pointer type ‘int *’ [-Wincompatible-pointer-types]
+   99 |         list->head = newNode;
+      |                    ^
+list.c: In function ‘pushCurrent’:
+list.c:111:54: error: ‘return’ with a value, in function returning void [-Wreturn-mismatch]
+  111 |     if(list == NULL || list->current == NULL) return NULL;
+      |                                                      ^~~~
+list.c:110:6: note: declared here
+  110 | void pushCurrent(List * list, void * data) {
+      |      ^~~~~~~~~~~
+6bfc8a1
