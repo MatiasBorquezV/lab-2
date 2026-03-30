@@ -441,3 +441,22 @@ Fri Mar 27 08:52:18 PM UTC 2026:
  tests:  10|2
 total_score: 40/60
 546cfd9
+Mon Mar 30 01:26:44 AM UTC 2026: 
+ list.c | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:114:5: error: ‘newNode’ undeclared (first use in this function); did you mean ‘newNodo’?
+  114 |     newNode->prev = lista->current;
+      |     ^~~~~~~
+      |     newNodo
+list.c:114:5: note: each undeclared identifier is reported only once for each function it appears in
+list.c:114:21: error: ‘lista’ undeclared (first use in this function); did you mean ‘list’?
+  114 |     newNode->prev = lista->current;
+      |                     ^~~~~
+      |                     list
+list.c:117:45: error: expected expression before ‘<’ token
+  117 |     if(newNodo->next != NULL) newNodo->next-<rpev = newNodo;
+      |                                             ^
+04677d9
