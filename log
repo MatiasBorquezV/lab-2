@@ -488,3 +488,15 @@ list.c:114:21: error: ‘lista’ undeclared (first use in this function); did y
       |                     list
 list.c:114:21: note: each undeclared identifier is reported only once for each function it appears in
 5613659
+Mon Mar 30 01:29:20 AM UTC 2026: 
+ list.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:119:10: error: ‘lista’ undeclared (first use in this function); did you mean ‘list’?
+  119 |     else lista->tail = newNodo;
+      |          ^~~~~
+      |          list
+list.c:119:10: note: each undeclared identifier is reported only once for each function it appears in
+2c55ec8
