@@ -143,8 +143,8 @@ void * popCurrent(List * list) {
         list->tail = NULL;
     }
     else if(nodoBorrar == list->tail){
-        lista->tail = nodoBorrar->prev;
-        lista->tail->next = NULL;
+        list->tail = nodoBorrar->prev;
+        list->tail->next = NULL;
     }
     else{
         nodoBorrar->prev->next = nodoBorrar->next;
