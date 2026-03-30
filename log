@@ -506,3 +506,15 @@ Mon Mar 30 01:29:30 AM UTC 2026:
  tests:  11|1
 total_score: 50/60
 392c7d1
+Mon Mar 30 01:35:25 AM UTC 2026: 
+ list.c | 21 ++++++++++++++++++++-
+ 1 file changed, 20 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:146:9: error: ‘lista’ undeclared (first use in this function); did you mean ‘list’?
+  146 |         lista->tail = nodoBorrar->prev;
+      |         ^~~~~
+      |         list
+list.c:146:9: note: each undeclared identifier is reported only once for each function it appears in
+9012851
