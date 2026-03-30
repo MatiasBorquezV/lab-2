@@ -460,3 +460,19 @@ list.c:117:45: error: expected expression before ‘<’ token
   117 |     if(newNodo->next != NULL) newNodo->next-<rpev = newNodo;
       |                                             ^
 04677d9
+Mon Mar 30 01:27:15 AM UTC 2026: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:114:5: error: ‘newNode’ undeclared (first use in this function); did you mean ‘newNodo’?
+  114 |     newNode->prev = lista->current;
+      |     ^~~~~~~
+      |     newNodo
+list.c:114:5: note: each undeclared identifier is reported only once for each function it appears in
+list.c:114:21: error: ‘lista’ undeclared (first use in this function); did you mean ‘list’?
+  114 |     newNode->prev = lista->current;
+      |                     ^~~~~
+      |                     list
+cf9ab31
